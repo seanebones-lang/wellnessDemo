@@ -348,7 +348,7 @@ export default function Home() {
             This complete platform is available for acquisition. Get a turnkey wellness solution
             with production-ready code, infrastructure, and comprehensive documentation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <a
               href="https://bizbot.store"
               target="_blank"
@@ -357,12 +357,6 @@ export default function Home() {
             >
               Discuss Acquisition at BizBot.store
               <ChevronRight className="ml-2 w-6 h-6" />
-            </a>
-            <a
-              href="mailto:sean@wellnessai.com"
-              className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-lg text-white rounded-full font-semibold text-lg border-2 border-white/30 hover:bg-white/20 transition-all duration-300"
-            >
-              Email: sean@wellnessai.com
             </a>
           </div>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-white/90">
@@ -415,7 +409,6 @@ export default function Home() {
             <div>
               <h3 className="text-white font-bold text-lg mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Email: sean@wellnessai.com</li>
                 <li>Acquisition: <a href="https://bizbot.store" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">bizbot.store</a></li>
                 <li>Repository: <a href="https://github.com/seanebones-lang/WellnessAI" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">GitHub</a></li>
               </ul>
