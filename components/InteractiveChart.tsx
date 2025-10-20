@@ -19,31 +19,70 @@ export default function InteractiveChart({
   color = '#8b5cf6',
   height = 300,
 }: ChartProps) {
-  const ChartComponent = type === 'line' ? LineChart : type === 'area' ? AreaChart : BarChart;
-  const DataComponent = type === 'line' ? Line : type === 'area' ? Area : Bar;
-
   return (
     <ResponsiveContainer width="100%" height={height}>
-      <ChartComponent data={data}>
-        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-        <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
-        <YAxis stroke="rgba(255,255,255,0.5)" />
-        <Tooltip
-          contentStyle={{
-            backgroundColor: 'rgba(0,0,0,0.8)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            borderRadius: '8px',
-          }}
-        />
-        <Legend />
-        <DataComponent
-          type="monotone"
-          dataKey={dataKey}
-          stroke={color}
-          fill={color}
-          strokeWidth={2}
-        />
-      </ChartComponent>
+      {type === 'line' && (
+        <LineChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+          <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
+          <YAxis stroke="rgba(255,255,255,0.5)" />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              borderRadius: '8px',
+            }}
+          />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey={dataKey}
+            stroke={color}
+            strokeWidth={2}
+          />
+        </LineChart>
+      )}
+      {type === 'area' && (
+        <AreaChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+          <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
+          <YAxis stroke="rgba(255,255,255,0.5)" />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              borderRadius: '8px',
+            }}
+          />
+          <Legend />
+          <Area
+            type="monotone"
+            dataKey={dataKey}
+            stroke={color}
+            fill={color}
+            strokeWidth={2}
+          />
+        </AreaChart>
+      )}
+      {type === 'bar' && (
+        <BarChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+          <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
+          <YAxis stroke="rgba(255,255,255,0.5)" />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              borderRadius: '8px',
+            }}
+          />
+          <Legend />
+          <Bar
+            dataKey={dataKey}
+            fill={color}
+          />
+        </BarChart>
+      )}
     </ResponsiveContainer>
   );
 }
