@@ -19,9 +19,9 @@ export default function InteractiveChart({
   color = '#8b5cf6',
   height = 300,
 }: ChartProps) {
-  return (
-    <ResponsiveContainer width="100%" height={height}>
-      {type === 'line' && (
+  if (type === 'line') {
+    return (
+      <ResponsiveContainer width="100%" height={height}>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
           <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
@@ -41,8 +41,13 @@ export default function InteractiveChart({
             strokeWidth={2}
           />
         </LineChart>
-      )}
-      {type === 'area' && (
+      </ResponsiveContainer>
+    );
+  }
+
+  if (type === 'area') {
+    return (
+      <ResponsiveContainer width="100%" height={height}>
         <AreaChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
           <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
@@ -63,26 +68,29 @@ export default function InteractiveChart({
             strokeWidth={2}
           />
         </AreaChart>
-      )}
-      {type === 'bar' && (
-        <BarChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
-          <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
-          <YAxis stroke="rgba(255,255,255,0.5)" />
-          <Tooltip
-            contentStyle={{
-              backgroundColor: 'rgba(0,0,0,0.8)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              borderRadius: '8px',
-            }}
-          />
-          <Legend />
-          <Bar
-            dataKey={dataKey}
-            fill={color}
-          />
-        </BarChart>
-      )}
+      </ResponsiveContainer>
+    );
+  }
+
+  return (
+    <ResponsiveContainer width="100%" height={height}>
+      <BarChart data={data}>
+        <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+        <XAxis dataKey={xKey} stroke="rgba(255,255,255,0.5)" />
+        <YAxis stroke="rgba(255,255,255,0.5)" />
+        <Tooltip
+          contentStyle={{
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: '8px',
+          }}
+        />
+        <Legend />
+        <Bar
+          dataKey={dataKey}
+          fill={color}
+        />
+      </BarChart>
     </ResponsiveContainer>
   );
 }
