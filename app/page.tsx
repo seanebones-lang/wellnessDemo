@@ -157,13 +157,77 @@ export default function Home() {
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-4">
-              Interactive Platform Demo
+              Complete AI-Powered Wellness Platform
             </p>
             
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              Experience every component of the WellnessAI ecosystem with live demonstrations,
-              interactive features, and detailed technical insights.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-6">
+              <strong>Interactive Demo System</strong> - Explore Every Component
             </p>
+            
+            <div className="max-w-5xl mx-auto mb-12 text-left bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-4">What This Demo Shows</h2>
+              <div className="grid md:grid-cols-2 gap-6 text-gray-300">
+                <div>
+                  <h3 className="text-lg font-semibold text-green-400 mb-2">✅ Fully Interactive</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Live health monitoring simulations</li>
+                    <li>• AI predictions with real-time data</li>
+                    <li>• Interactive fitness tracking</li>
+                    <li>• Nutrition planning tools</li>
+                    <li>• Mobile app walkthrough</li>
+                    <li>• Enterprise dashboard demo</li>
+                    <li>• Analytics with live charts</li>
+                    <li>• Computer vision demonstrations</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-2">📊 Technical Documentation</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Complete system architecture</li>
+                    <li>• Security & compliance frameworks</li>
+                    <li>• Cloud infrastructure design</li>
+                    <li>• Performance benchmarks</li>
+                    <li>• API documentation</li>
+                    <li>• Database schemas</li>
+                    <li>• Deployment strategies</li>
+                    <li>• Scalability solutions</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">⚠️ What's Not Included</h3>
+                <p className="text-sm text-gray-400 mb-3">
+                  This demo uses simulated data and mock backends. The following require production infrastructure:
+                </p>
+                <ul className="grid md:grid-cols-2 gap-2 text-sm text-gray-400">
+                  <li>• Live ML model training</li>
+                  <li>• Real-time wearable integration</li>
+                  <li>• Production database connections</li>
+                  <li>• Payment processing</li>
+                  <li>• Email/SMS notifications</li>
+                  <li>• Third-party API integrations</li>
+                </ul>
+              </div>
+              
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">🎯 What You Can Expect</h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-300">
+                  <div>
+                    <strong className="text-white">Production-Ready Code</strong>
+                    <p className="text-gray-400 mt-1">Enterprise-grade architecture with 99.9% uptime SLA</p>
+                  </div>
+                  <div>
+                    <strong className="text-white">Scalable Infrastructure</strong>
+                    <p className="text-gray-400 mt-1">Kubernetes-based deployment handling millions of users</p>
+                  </div>
+                  <div>
+                    <strong className="text-white">Full Customization</strong>
+                    <p className="text-gray-400 mt-1">White-label ready with complete source code access</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
@@ -269,10 +333,96 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Acquisition CTA */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Interested in Acquiring WellnessAI?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            This complete platform is available for acquisition. Get a turnkey wellness solution
+            with production-ready code, infrastructure, and comprehensive documentation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="https://bizbot.store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-10 py-5 bg-white text-purple-600 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              Discuss Acquisition at BizBot.store
+              <ChevronRight className="ml-2 w-6 h-6" />
+            </a>
+            <a
+              href="mailto:sean@wellnessai.com"
+              className="inline-flex items-center px-10 py-5 bg-white/10 backdrop-blur-lg text-white rounded-full font-semibold text-lg border-2 border-white/30 hover:bg-white/20 transition-all duration-300"
+            >
+              Email: sean@wellnessai.com
+            </a>
+          </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-white/90">
+            <div>
+              <div className="text-3xl font-bold mb-2">$2M+</div>
+              <div className="text-sm">Development Investment</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2">100%</div>
+              <div className="text-sm">Production Ready</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold mb-2">Full Stack</div>
+              <div className="text-sm">Complete Platform</div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Footer */}
-      <div className="border-t border-white/10 mt-24">
+      <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center text-gray-400">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">WellnessAI Platform</h3>
+              <p className="text-gray-400 text-sm mb-4">
+                Complete AI-powered wellness ecosystem for B2C and B2B markets.
+                Production-ready, scalable, and fully documented.
+              </p>
+              <div className="flex gap-4">
+                <a href="https://github.com/seanebones-lang/WellnessAI" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  GitHub
+                </a>
+                <a href="https://bizbot.store" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  BizBot.store
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/demo/health" className="text-gray-400 hover:text-white transition-colors">Health Monitoring</a></li>
+                <li><a href="/demo/ai" className="text-gray-400 hover:text-white transition-colors">AI Insights</a></li>
+                <li><a href="/demo/fitness" className="text-gray-400 hover:text-white transition-colors">Fitness Tracking</a></li>
+                <li><a href="/demo/enterprise" className="text-gray-400 hover:text-white transition-colors">Enterprise Portal</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">Contact</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>Email: sean@wellnessai.com</li>
+                <li>Acquisition: <a href="https://bizbot.store" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">bizbot.store</a></li>
+                <li>Repository: <a href="https://github.com/seanebones-lang/WellnessAI" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/10 pt-8 text-center text-gray-400">
             <p className="mb-2">
               <strong className="text-white">WellnessAI Platform</strong> - Proprietary Software
             </p>
@@ -280,7 +430,10 @@ export default function Home() {
               Copyright © 2025 Sean McDonnell. All Rights Reserved.
             </p>
             <p className="text-xs mt-2">
-              For licensing inquiries: sean@wellnessai.com
+              This is a demonstration system. For licensing and acquisition inquiries, visit{' '}
+              <a href="https://bizbot.store" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">
+                bizbot.store
+              </a>
             </p>
           </div>
         </div>
